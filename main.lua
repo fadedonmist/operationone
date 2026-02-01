@@ -59,8 +59,8 @@ local function drawPlayers()
             if hrp and humanoid and stateObject then
                 seenModels[obj] = true
                 
-                local footPos = hrp.Position - Vector3.new(0, 3, 0)
-                local headPos = hrp.Position + Vector3.new(0, 1.5, 0)  -- Slightly higher for box top
+                local footPos = hrp.Position - Vector3.new(0, 2.5, 0)
+                local headPos = hrp.Position + Vector3.new(0, 1, 0)  -- Slightly higher for box top
                 
                 local screenFoot, visFoot = WorldToScreen(footPos)
                 local screenHead, visHead = WorldToScreen(headPos)
@@ -93,7 +93,7 @@ local function drawPlayers()
                 
                 if vis then
                     local boxHeight = math.abs(screenFoot.Y - screenHead.Y)
-                    local boxWidth = boxHeight / 2
+                    local boxWidth = boxHeight / 1.7
                     local boxX = screenHead.X - (boxWidth / 2)
                     local boxY = screenHead.Y
                     
